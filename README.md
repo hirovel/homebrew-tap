@@ -2,7 +2,7 @@
 
 Focused writing in your terminal with [Novelite TUI](https://github.com/hirovel/novelite-tui).
 
-The first Apple Silicon package is being prepared. After its release and installation checks:
+For macOS on Apple Silicon (M1 and later):
 
 ```sh
 brew install hirovel/tap/novelite-tui
