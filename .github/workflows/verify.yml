@@ -1,0 +1,28 @@
+name: Verify Apple Silicon installation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  install:
+    runs-on: macos-15
+    timeout-minutes: 15
+    steps:
+      - name: Install the public package
+        run: |
+          test "$(uname -m)" = arm64
+          brew install hirovel/tap/novelite-tui
+          brew test hirovel/tap/novelite-tui
+          binary="$(brew --prefix hirovel/tap/novelite-tui)/bin/novelite-tui"
+          "$binary" --version
+          codesign --verify --strict "$binary"
+          file "$binary"
+          otool -L "$binary"
+      - name: Verify the update entry point
+        run: |
+          brew update
+          brew upgrade novelite-tui
+          novelite-tui --version
