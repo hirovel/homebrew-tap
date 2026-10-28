@@ -1,9 +1,9 @@
 class NoveliteTui < Formula
   desc "Focused writing in your terminal"
   homepage "https://github.com/hirovel/novelite-tui"
-  url "https://github.com/hirovel/novelite-tui/releases/download/v0.1.1/novelite-tui-v0.1.1-aarch64-apple-darwin.tar.gz"
-  version "0.1.1"
-  sha256 "07b36e70210e864fb86eea407726c8ae832a7d4b4a99c54d59d8a9a3bd8eb9f9"
+  url "https://github.com/hirovel/novelite-tui/releases/download/v0.2.1/novelite-tui-v0.2.1-aarch64-apple-darwin.tar.gz"
+  version "0.2.1"
+  sha256 "0e4b6e419cdba328e7deb396973d7a4271d81e5db7f05a4c6420219e54cdb136"
   license "GPL-3.0-only"
 
   depends_on arch: :arm64
